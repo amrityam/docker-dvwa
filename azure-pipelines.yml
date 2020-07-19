@@ -24,7 +24,7 @@ stages:
       displayName: Scan image using Aqua
       inputs:
         image: 'mcr.microsoft.com/windows'
-        scanType: 'hosted'
+        scanType: 'local'
         register: false
         hideBase: true
         showNegligible: true
