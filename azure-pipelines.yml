@@ -29,7 +29,6 @@ stages:
         hideBase: false
         showNegligible: true
         windowsScannerVersion: '4.2.0'
-        scanner: 'registry.aquasec.com/scanner:5.0'
         registry: 'Docker Hub'
         connection: 'AquaSec-Console'
         customFlags: '--show-negligible'
