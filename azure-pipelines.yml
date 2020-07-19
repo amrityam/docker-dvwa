@@ -26,8 +26,7 @@ stages:
         image: 'alpine:3.9.4'
         scanType: 'hosted'
         register: false
-        hideBase: false
-        showNegligible: false
+        hideBase: true
+        showNegligible: true
         windowsScannerVersion: '4.2.0'
-        scanner: 
         connection: 'AquaSec-Console'
