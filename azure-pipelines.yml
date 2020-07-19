@@ -27,3 +27,14 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+- task: aquasecScanner@4
+  inputs:
+    image: 'amrityam.docker-dvwa'
+    scanType: 'local'
+    register: false
+    hideBase: false
+    showNegligible: true
+    windowsScannerVersion: '4.2.0'
+    connection: 'AquaSec-Console'
+    customFlags: '--layer-vulnerabilities'
+    caCertificates: true
