@@ -31,7 +31,7 @@ stages:
       displayName: Scan image using Aqua
       inputs:
         image: 'amrityam.docker-dvwa'
-        scanType: 'local'
+        scanType: 'hosted'
         register: false
         hideBase: false
         showNegligible: true
