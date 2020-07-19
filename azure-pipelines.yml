@@ -29,5 +29,4 @@ stages:
         hideBase: true
         showNegligible: true
         windowsScannerVersion: '4.2.0'
-        registry: 'Docker Hub'
         connection: 'AquaSec-Console'
