@@ -24,12 +24,11 @@ stages:
       displayName: Scan image using Aqua
       inputs:
         image: 'alpine:3.9.4'
-        scanType: 'local'
+        scanType: 'hosted'
         register: true
         hideBase: false
-        showNegligible: true
+        showNegligible: false
         windowsScannerVersion: '4.2.0'
         registry: 'Docker Hub'
         connection: 'AquaSec-Console'
-        customFlags: '--show-negligible'
         caCertificates: true
