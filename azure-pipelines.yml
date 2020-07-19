@@ -30,12 +30,15 @@ stages:
     - task: aquasecScanner@4
       displayName: Scan image using Aqua
       inputs:
-        image: 'amrityam.docker-dvwa'
+        image: 'alpine:3.9.4'
         scanType: 'hosted'
-        register: false
+        register: true
         hideBase: false
         showNegligible: true
         windowsScannerVersion: '4.2.0'
+        scanner: 'registry.aquasec.com/scanner:4.6'
+        registry: 'Docker Hub'
         connection: 'AquaSec-Console'
+        composefile: 'alpine:3.9.4'
         customFlags: '--layer-vulnerabilities'
         caCertificates: true
