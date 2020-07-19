@@ -24,7 +24,7 @@ stages:
       displayName: Scan image using Aqua
       inputs:
         image: 'alpine:3.9.4'
-        scanType: 'hosted'
+        scanType: 'local'
         register: true
         hideBase: false
         showNegligible: true
