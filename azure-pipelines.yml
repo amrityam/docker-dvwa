@@ -18,15 +18,16 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: 'ubuntu-latest'
+      vmImage: 'vs2017-win2016'
     steps:
     - task: aquasecScanner@4
       displayName: Scan image using Aqua
       inputs:
-        image: 'alpine:3.9.4'
+        image: 'mcr.microsoft.com/windows'
         scanType: 'hosted'
         register: false
         hideBase: true
         showNegligible: true
         windowsScannerVersion: '4.2.0'
+        registry: 'Docker Hub'
         connection: 'AquaSec-Console'
