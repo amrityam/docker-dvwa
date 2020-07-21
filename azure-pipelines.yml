@@ -23,10 +23,12 @@ stages:
     - task: aquasecScanner@4
       displayName: Scan image using Aqua
       inputs:
-        image: 'mcr.microsoft.com/windows'
-        scanType: 'local'
+        image: 'alpine:3.9.4'
+        scanType: 'hosted'
         register: false
-        hideBase: true
-        showNegligible: true
+        hideBase: false
+        showNegligible: false
         windowsScannerVersion: '4.2.0'
+        scanner: 'registry.aquasec.com/scanner:5.0'
+        registry: 'DockerHub'
         connection: 'AquaSec-Console'
