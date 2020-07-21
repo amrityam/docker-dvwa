@@ -29,6 +29,6 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '4.2.0'
-        scanner: 'registry.aquasec.com/scanner:5.0'
+        scanner: 'registry.aquasec.com/scanner:4.2.0'
         registry: 'DockerHub'
         connection: 'AquaSec-Console'
